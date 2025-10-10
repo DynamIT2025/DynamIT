@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DynamIT — Software a medida que explota resultados</title>
+  <meta name="description" content="DynamIT: estudio de software a medida. Sitios web, apps y automatizaciones para PyMEs y emprendedores. Calidad, velocidad y soporte real." />
+
+  <!-- OG/Twitter (TODO: reemplazar con dominio/imagen real) -->
+  <meta property="og:title" content="DynamIT — Software a medida" />
+  <meta property="og:description" content="Sitios web, apps y automatizaciones que explotan resultados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=1200&h=630&fit=crop&auto=format&q=70" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{
+      /* Paleta Dynamite */
+      --orange: #ff6f00;      /* naranja principal */
+      --red:    #ef4444;      /* rojo */
+      --sky:    #38bdf8;      /* celeste */
+      --ink:    #0b1220;      /* fondo oscuro */
+      --ink-2:  #0f172a;      /* fondo secundario */
+      --fg:     #f6f9ff;      /* texto principal */
+      --muted:  #cbd5e1;      /* subtítulos */
+      --border: #334155;      /* bordes */
+      --nav-h:  78px;
+    }
+
+    html{scroll-behavior:smooth}
+    body{font-family:"Inter",system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 70%);line-height:1.75}
+
+    /* Navbar */
+    .navbar{backdrop-filter:blur(8px);background:rgba(11,18,32,.85)!important;border-bottom:1px solid var(--border)}
+    .nav-link{color:var(--fg)!important;opacity:.95;font-weight:600}
+    .nav-link:hover,.nav-link:focus{opacity:1}
+    .nav-link.active{color:#fff!important;text-decoration:underline;text-underline-offset:6px}
+
+    /* Botones brand */
+    .btn-brand{background:linear-gradient(135deg,var(--orange),var(--red));border:none;color:white;font-weight:800}
+    .btn-brand:hover{filter:brightness(1.08)}
+    .btn-outline-sky{border:2px solid var(--sky);color:var(--sky);font-weight:700}
+    .btn-outline-sky:hover{background:var(--sky);color:#082032}
+
+    /* Hero */
+    .hero{min-height:100svh;display:grid;place-items:center;position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+      linear-gradient(180deg,rgba(11,18,32,.85) 0%,rgba(11,18,32,.6) 100%),
+      url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&h=900&fit=crop&auto=format&q=70') center/cover no-repeat}
+    .kicker{letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800}
+
+    /* Secciones */
+    section[id]{scroll-margin-top:var(--nav-h)}
+    .section{padding:88px 0}
+    .surface{background:rgba(255,255,255,.04);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+    /* Cards */
+    .card{background:rgba(255,255,255,.045);border:1px solid var(--border)}
+    .card-title{font-weight:800}
+    .badge-fire{background:linear-gradient(135deg,var(--orange),var(--red));color:#fff}
+
+    /* Timeline / Proceso */
+    .step{position:relative;padding-left:2.25rem}
+    .step::before{content:"";position:absolute;left:.5rem;top:.2rem;width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--orange),var(--red))}
+    .step::after{content:"";position:absolute;left:.76rem;top:1.1rem;bottom:-1.1rem;width:2px;background:linear-gradient(var(--orange),var(--red))}
+    .step:last-child::after{display:none}
+
+    /* CTA stripe */
+    .cta{background:linear-gradient(90deg,var(--orange),var(--red));color:#fff}
+
+    /* Footer */
+    footer{background:#091225;border-top:1px solid var(--border);color:var(--muted)}
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#nav" data-bs-offset="78">
+  <!-- Navbar -->
+  <nav id="nav" class="navbar navbar-expand-lg sticky-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#inicio">Dynamite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navC" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navC">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3"><a id="wa-nav" class="btn btn-outline-sky btn-sm" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i>Hablemos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="inicio" class="hero">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7 text-center text-lg-start">
+          <p class="kicker mb-2">Software a medida</p>
+          <h1 class="display-5 fw-800 mb-3" style="font-weight:800">Creamos sitios y apps que <span style="color:var(--sky)">explotan</span> tus resultados</h1>
+          <p class="lead mb-4">De la idea al producto. Diseñamos, desarrollamos y lanzamos soluciones confiables en semanas, no meses.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a id="wa-hero" class="btn btn-brand btn-lg" target="_blank" rel="noopener"><i class="bi bi-lightning-charge-fill me-2"></i>Quiero mi proyecto</a>
+            <a class="btn btn-outline-sky btn-lg" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden border" style="border-color:var(--border)">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=1600&h=900&fit=crop&auto=format&q=70" alt="Panel con código y diseño" loading="lazy" decoding="async" width="1600" height="900" style="object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Servicios -->
+  <section id="servicios" class="section" style="color: white;">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">Qué hacemos</h2>
+          <p class="mb-0">Sitios web modernos, tiendas online, dashboards internos y automatizaciones que te ahorran tiempo.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex align-items-center mb-2"><i class="bi bi-window-fullscreen fs-3 me-2" style="color:var(--sky)"></i><h3 class="h5 card-title mb-0" style="color:#fff;">Webs & Landings</h3></div>
+            <p style="color:#fff;">Diseño responsive, SEO básico y performance real. Publicamos en tu hosting o el nuestro.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex align-items-center mb-2"><i class="bi bi-bag-check fs-3 me-2" style="color:var(--orange)"></i><h3 class="h5 card-title mb-0" style="color:#fff;">E‑commerce</h3></div>
+            <p style="color:#fff">Catálogo, pagos, envíos y panel de gestión. Integraciones con pasarelas locales.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex align-items-center mb-2"><i class="bi bi-bar-chart-line fs-3 me-2" style="color:var(--red)"></i><h3 class="h5 card-title mb-0" style="color:#fff;">Dashboards</h3></div>
+            <p style="color:#fff;">Métricas de negocio y reportes en tiempo real. Acceso por roles y seguridad.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex align-items-center mb-2"><i class="bi bi-gear-wide-connected fs-3 me-2" style="color:var(--sky)"></i><h3 class="h5 card-title mb-0" style="color:#fff;">Automatizaciones</h3></div>
+            <p style="color:#fff;">Bots, integraciones y flujos que eliminan tareas repetitivas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section id="proceso" class="section surface">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">Cómo trabajamos</h2>
+          <p class="mb-0">Proceso claro en 4 pasos para que avances sin sorpresas.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="step mb-4">
+            <h3 class="h5">1. Brief & estrategia</h3>
+            <p>Definimos objetivos, público y alcance. Proponemos roadmap y presupuesto.</p>
+          </div>
+          <div class="step mb-4">
+            <h3 class="h5">2. Diseño</h3>
+            <p>Wireframes y UI con tu estética. Ajustes rápidos hasta el OK.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="step mb-4">
+            <h3 class="h5">3. Desarrollo</h3>
+            <p>Código limpio y accesible. Integramos APIs y pagos cuando hace falta.</p>
+          </div>
+          <div class="step mb-4">
+            <h3 class="h5">4. Lanzamiento & soporte</h3>
+            <p>Publicación, analytics y un plan de mejoras. Soporte en horario comercial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trabajos (placeholders) -->
+  <section id="trabajos" class="section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">Trabajos recientes</h2>
+          <p class="mb-0">Un vistazo a lo que hacemos. Pedí más ejemplos por WhatsApp.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden border" style="border-color:var(--border)">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&h=675&fit=crop&auto=format&q=70" alt="Sitio corporativo" loading="lazy" decoding="async" width="1200" height="675" style="object-fit:cover">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden border" style="border-color:var(--border)">
+            <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=1200&h=675&fit=crop&auto=format&q=70" alt="Tienda online" loading="lazy" decoding="async" width="1200" height="675" style="object-fit:cover">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden border" style="border-color:var(--border)">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=1200&h=675&fit=crop&auto=format&q=70" alt="Dashboard interno" loading="lazy" decoding="async" width="1200" height="675" style="object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios (ejemplo) -->
+  <section id="precios" class="section surface">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">Paquetes ejemplo</h2>
+          <p class="mb-0">Valores de referencia. Ajustamos según alcance y tiempos.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <span class="badge badge-fire align-self-start mb-2">Rápido</span>
+            <h3 class="h4 fw-bold" style="color:#fff;">Landing</h3>
+            <p style="color:#fff;">Una página, responsive, SEO básico y contacto. Ideal para campañas.</p>
+            <a class="btn btn-brand" href="#contacto">Empezar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <span class="badge badge-fire align-self-start mb-2">Popular</span>
+            <h3 class="h4 fw-bold" style="color:#fff;">Web Pro</h3>
+            <p style="color:#fff;">3–5 Páginas, blog, analítica, optimizaciones de rendimiento.</p>
+            <a class="btn btn-brand" href="#contacto">Empezar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4">
+            <span class="badge badge-fire align-self-start mb-2">A medida</span>
+            <h3 class="h4 fw-bold" style="color:#fff;">App / E‑commerce</h3>
+            <p style="color:#fff;">Catálogo, pagos, integraciones y panel de administración.</p>
+            <a class="btn btn-brand" href="#contacto">Empezar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA stripe -->
+  <section class="cta py-5">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+      <h3 class="mb-0 fw-bold">¿Listo para lanzar algo que encienda tu marca?</h3>
+      <div class="d-flex gap-2">
+        <a id="wa-cta" class="btn btn-light btn-lg fw-bold" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>Hablar ahora</a>
+        <a class="btn btn-outline-light btn-lg fw-bold" href="#contacto">Enviar consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Contanos tu idea</h2>
+          <p>Respondemos en horario comercial. Cuanta más info nos des, mejor estimación.</p>
+          <form class="row g-3" onsubmit="event.preventDefault(); this.reset(); alert('¡Gracias! Te responderemos a la brevedad.');">
+            <div class="col-md-6"><label class="form-label">Nombre</label><input class="form-control" required></div>
+            <div class="col-md-6"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
+            <div class="col-12"><label class="form-label">Mensaje</label><textarea class="form-control" rows="4" required></textarea></div>
+            <div class="col-12 d-flex gap-2">
+              <button class="btn btn-brand" type="submit">Enviar</button>
+              <a id="wa-form" class="btn btn-outline-sky" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-5 ms-auto">
+          <div class="p-4 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid var(--border)">
+            <h3 class="h5 fw-bold mb-3">Datos</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><i class="bi bi-envelope me-2" style="color:var(--sky)"></i> hola@dynamite.dev</li>
+              <li class="mb-2"><i class="bi bi-geo-alt me-2" style="color:var(--orange)"></i> Argentina — remoto</li>
+              <li class="mb-2"><i class="bi bi-clock me-2" style="color:var(--red)"></i> Lun a Vie — 9 a 18 h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+      <div class="small">&copy; <span id="year"></span> Dynamite. Todos los derechos reservados.</div>
+      <div class="small">Hecho con <span class="text-danger">❤</span> + café.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // WhatsApp (placeholder)
+    const phone = "5491112345678"; // TODO: reemplazar
+    const msg = encodeURIComponent("Hola Dynamite, quiero empezar un proyecto. ¿Podemos hablar?");
+    const wa = `https://wa.me/${phone}?text=${msg}`;
+    ["wa-nav","wa-hero","wa-cta","wa-form"].forEach(id=>{const a=document.getElementById(id); if(a) a.href=wa;});
+
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ScrollSpy estable
+    new bootstrap.ScrollSpy(document.body,{target:'#nav',offset:78});
+  </script>
+</body>
+</html>
