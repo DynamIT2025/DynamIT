@@ -280,7 +280,7 @@
     <div class="container">
       <div class="row g-4 align-items-start">
         <div class="col-lg-6">
-          <h2 class="fw-bold">Contanos tu idea</h2>
+          <h2 class="fw-bold">¡Contanos tu idea!</h2>
           <p>Respondemos en horario comercial. Cuanta más info nos des, mejor estimación.</p>
           <form class="row g-3" onsubmit="event.preventDefault(); this.reset(); alert('¡Gracias! Te responderemos a la brevedad.');">
             <div class="col-md-6"><label class="form-label">Nombre</label><input class="form-control" required></div>
@@ -296,8 +296,8 @@
           <div class="p-4 rounded-3" style="background:rgba(255,255,255,.05);border:1px solid var(--border)">
             <h3 class="h5 fw-bold mb-3">Datos</h3>
             <ul class="list-unstyled mb-0">
-              <li class="mb-2"><i class="bi bi-envelope me-2" style="color:var(--sky)"></i> hola@dynamite.dev</li>
-              <li class="mb-2"><i class="bi bi-geo-alt me-2" style="color:var(--orange)"></i> Argentina — remoto</li>
+              <li class="mb-2"><i class="bi bi-envelope me-2" style="color:var(--sky)"></i> corpdynamit@gmail.com</li>
+              <li class="mb-2"><i class="bi bi-geo-alt me-2" style="color:var(--orange)"></i> Argentina — Ciudad de Corrientes</li>
               <li class="mb-2"><i class="bi bi-clock me-2" style="color:var(--red)"></i> Lun a Vie — 9 a 18 h</li>
             </ul>
           </div>
@@ -318,7 +318,7 @@
   <script>
     // WhatsApp (placeholder)
     const phone = "5493704098442"; // TODO: reemplazar
-    const msg = encodeURIComponent("Hola Dynamite, quiero empezar un proyecto. ¿Podemos hablar?");
+    const msg = encodeURIComponent("Hola DynamIT, me gustaría empezar un proyecto. ¿Podemos hablar?");
     const wa = `https://wa.me/${phone}?text=${msg}`;
     ["wa-nav","wa-hero","wa-cta","wa-form"].forEach(id=>{const a=document.getElementById(id); if(a) a.href=wa;});
 
