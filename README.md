@@ -1,4 +1,4 @@
-# 🌐 DynamIT
+# DynamIT
 
 **Materia:** Práctica Profesionalizante I  
 **Carrera:** Tecnicatura Superior en Desarrollo de Software/Tecnicatura Superior en Infraestructura Informática  
@@ -7,18 +7,18 @@
 
 ---
 
-## 🏢 Sobre la empresa
+##  Sobre la empresa
 
 **DynamIT** es una empresa ficticia creada en el marco de la materia *Práctica Profesionalizante I*.  
 Nos especializamos en el **desarrollo de sitios web modernos, tiendas online, dashboards internos y automatizaciones personalizadas** para empresas e individuos.
 
 Nuestro objetivo es brindar **soluciones digitales eficientes, estéticas y escalables**, adaptadas a las necesidades específicas de cada cliente.
 
-🌎 Sitio web oficial: [https://dynamit2025.github.io/DynamIT/#inicio]
+ Sitio web oficial: [https://dynamit2025.github.io/DynamIT/#inicio]
 
 ---
 
-## 💼 Servicios ofrecidos
+##Servicios ofrecidos
 
 - **Desarrollo de sitios web modernos**  
   Diseño adaptable (responsive), optimización SEO y rendimiento web.
@@ -34,7 +34,7 @@ Nuestro objetivo es brindar **soluciones digitales eficientes, estéticas y esca
 
 ---
 
-## 🧠 Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - HTML5, CSS3, JavaScript  
 - GitHub Pages  
@@ -43,7 +43,7 @@ Nuestro objetivo es brindar **soluciones digitales eficientes, estéticas y esca
 
 ---
 
-## 👥 Integrantes del equipo
+##  Integrantes del equipo
 
 - Fernández Rojas Elio Fabricio  
 - Gómez Lautaro  
@@ -53,13 +53,13 @@ Nuestro objetivo es brindar **soluciones digitales eficientes, estéticas y esca
 
 ---
 
-## 🎯 Objetivo del proyecto
+##  Objetivo del proyecto
 
 Desarrollar un **proyecto integral que simule el funcionamiento de una empresa de software**, aplicando conocimientos técnicos, organizativos y comunicativos adquiridos a lo largo de la carrera.
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Proyecto académico — *Instituto Superior San José (I-27)*  
 Uso exclusivo con fines educativos.
