@@ -36,7 +36,7 @@ Nuestro objetivo es brindar **soluciones digitales eficientes, estéticas y esca
 
 ##  Tecnologías utilizadas
 
-- HTML5, CSS3, JavaScript  
+- HTML5, CSS, JavaScript  
 - GitHub Pages  
 - Librerías y frameworks de diseño web  
 - Herramientas de prototipado y planificación (Figma, Trello, etc.)
